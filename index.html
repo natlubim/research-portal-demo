@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12263a">
+  <title>Портал исследований</title>
+  <style>:root{font-family:Inter,Arial,sans-serif;color:#182a39;background:#f5f7f8;font-synthesis:none}*{box-sizing:border-box}body{margin:0}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:wait}.hidden{display:none!important}.shell{display:grid;grid-template-columns:264px minmax(0,1fr);min-height:100vh}.sidebar{background:#10283a;color:#d2dce3;padding:28px 17px;display:flex;flex-direction:column;position:sticky;top:0;height:100vh}.brand{display:flex;align-items:center;gap:12px;color:#fff;font-size:17px;font-weight:750;letter-spacing:-.03em;margin:0 10px 43px}.brand small{display:block;color:#90a6b5;font-size:11px;font-weight:500;letter-spacing:.02em;margin-top:4px}.brand-mark{display:grid;place-items:center;background:#d6ee99;color:#18333d;border-radius:12px;width:38px;height:38px;font-size:21px;font-weight:800}.side-label{color:#7d98a9;font-size:10px;font-weight:750;letter-spacing:.16em;margin:0 14px 13px}.sections-label{margin-top:35px}.nav-item,.section-item{display:block;width:100%;text-align:left;border:0;background:transparent;color:#c0ced7;border-radius:10px;padding:12px 13px;font-size:13px;line-height:1.35}.nav-item:hover,.section-item:hover,.text-button:hover{background:#1b3a4e;color:#fff}.nav-item.active,.section-item.active{background:#29495a;color:#fff;font-weight:700}.section-item{padding:9px 13px;color:#aebfca}.text-button{border:0;background:transparent;text-align:left;color:#d6ee99;font-size:12px;padding:12px 14px;border-radius:10px;margin-top:9px}.sidebar-footer{margin-top:auto;padding:20px 13px 0;border-top:1px solid #2d4757;font-size:12px;color:#91a8b7}.status-dot{display:inline-block;width:7px;height:7px;background:#b8dc7b;border-radius:50%;margin-right:8px}.topbar{height:69px;border-bottom:1px solid #e7ebee;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 40px}.breadcrumb{font-size:12px;color:#8595a0}.breadcrumb span{color:#26404e;font-weight:650}.identity{font-size:12px;color:#3c5260;display:flex;align-items:center;gap:12px}.identity button{border:1px solid #d8e1e5;background:#fff;border-radius:8px;padding:7px 10px;color:#25414e}.content{max-width:1310px;padding:37px 40px 80px;margin:auto}.hero{background:#e9f1ee;border-radius:16px;padding:34px 40px;display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:188px;background-image:radial-gradient(circle at 78% 90%,#d1e4d5 0,transparent 28%),linear-gradient(110deg,#eaf3ee,#edf2eb)}.eyebrow{font-size:11px;letter-spacing:.16em;font-weight:800;color:#4e847b}.hero h1{font-size:32px;letter-spacing:-.05em;margin:10px 0 8px;color:#153a43}.hero p{margin:0;color:#607a80;font-size:14px}.hero-count{font-size:48px;font-weight:750;letter-spacing:-.06em;color:#286356;min-width:110px;text-align:center}.hero-count small{display:block;font-size:12px;font-weight:600;letter-spacing:0;color:#63837b}.toolbar{display:flex;justify-content:space-between;gap:16px;margin:30px 0 31px}.search-wrap{background:#fff;border:1px solid #dfe6e9;border-radius:10px;display:flex;align-items:center;gap:10px;padding:0 15px;min-width:290px;width:min(480px,100%);color:#7a8e99}.search-wrap span{font-size:25px}.search-wrap input{border:0;outline:0;width:100%;height:43px;background:transparent;font-size:13px;color:#213e4b}.primary,.secondary,.danger{display:inline-flex;align-items:center;justify-content:center;gap:6px;border-radius:9px;padding:10px 15px;text-decoration:none;font-size:13px;font-weight:650;white-space:nowrap}.primary{background:#1d675b;color:#fff;border:1px solid #1d675b}.primary:hover{background:#185449}.secondary{background:#fff;color:#274b56;border:1px solid #d9e3e6}.secondary:hover{background:#f0f6f5}.danger{background:#fff;color:#a24844;border:1px solid #e9c9c7}.danger:hover{background:#fff1ef}.section-heading{display:flex;align-items:end;justify-content:space-between;margin-bottom:18px}.section-heading h2{font-size:21px;margin:0 0 5px;letter-spacing:-.03em}.section-heading p{margin:0;color:#8a99a1;font-size:12px}.count{font-size:12px;color:#7f9099}.report-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:15px}.report-card{background:#fff;border:1px solid #e2e9eb;border-radius:12px;text-align:left;padding:21px;display:flex;flex-direction:column;min-height:210px;box-shadow:0 3px 12px #1d344408;transition:transform .15s,box-shadow .15s}.report-card:hover{transform:translateY(-2px);box-shadow:0 8px 25px #1d344414}.card-top{display:flex;align-items:center;justify-content:space-between;gap:8px}.badge{font-size:10px;font-weight:750;color:#39776e;background:#edf6f3;padding:5px 8px;border-radius:5px;max-width:80%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.format{font-size:10px;font-weight:750;color:#84969d}.report-card h3{font-size:16px;line-height:1.35;letter-spacing:-.02em;margin:18px 0 8px;color:#1f3744}.report-card p{font-size:12px;line-height:1.5;color:#7a8d97;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.card-bottom{border-top:1px solid #edf0f1;padding-top:13px;margin-top:auto;display:flex;justify-content:space-between;font-size:11px;color:#8b9ca4}.card-bottom strong{color:#1d675b}.notice{background:#fff;border:1px dashed #d6e2e4;border-radius:12px;padding:35px;text-align:center;color:#788e99;font-size:13px}.notice:empty{display:none}dialog{border:0;border-radius:15px;box-shadow:0 24px 90px #0e263c55;padding:0;color:#1c3441;max-height:90vh;overflow:auto}dialog::backdrop{background:#0d2537a8}.detail-dialog{width:min(850px,calc(100vw - 28px))}.form-dialog{width:min(750px,calc(100vw - 28px))}.admin-dialog{width:min(900px,calc(100vw - 28px))}.dialog-head{padding:25px 28px 18px;display:flex;justify-content:space-between;align-items:start;gap:16px;border-bottom:1px solid #e7edef}.dialog-head h2{font-size:23px;letter-spacing:-.035em;margin:7px 0 0;line-height:1.25}.icon-button{border:0;background:#edf3f3;border-radius:8px;width:31px;height:31px;font-size:23px;color:#546d78;line-height:1}.detail-meta{display:flex;gap:10px;padding:18px 28px 0;color:#6f8791;font-size:12px}.detail-meta span{background:#f2f6f6;padding:6px 9px;border-radius:6px}.detail-dialog h3{font-size:14px;margin:25px 28px 8px}.summary{font-size:14px;line-height:1.7;color:#506876;margin:0 28px 23px;white-space:pre-wrap}.preview{margin:0 28px 23px;border:1px solid #e0e8eb;border-radius:8px;overflow:hidden;background:#fafcfc}.preview iframe{width:100%;height:min(58vh,550px);border:0}.dialog-actions{border-top:1px solid #e7edef;padding:20px 28px;display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end}.hint{font-size:12px;line-height:1.5;color:#7c8f98;margin:14px 28px}.form-body{padding:22px 28px 10px}.form-body label{display:block;font-size:12px;font-weight:700;color:#385462;margin-bottom:17px}.form-body input,.form-body select,.form-body textarea,.inline-form input,.inline-form select{display:block;width:100%;margin-top:7px;background:#fff;border:1px solid #d4e0e4;border-radius:8px;padding:10px 11px;color:#1f3945;outline-color:#398d7b}.form-body textarea{resize:vertical}.form-body small{display:block;color:#8a9aa2;font-size:11px;font-weight:400;margin-top:4px}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:15px}.admin-tabs{display:flex;gap:8px;padding:18px 28px;border-bottom:1px solid #e7edef}.admin-tabs button{border:0;background:transparent;color:#738a96;padding:8px 11px;border-radius:7px}.admin-tabs button.active{background:#e9f3f0;color:#1d675b;font-weight:700}.inline-form{display:flex;gap:9px;padding:5px 28px 20px;align-items:end}.inline-form input,.inline-form select{margin:0;min-width:0}.inline-form .check{font-size:12px;white-space:nowrap;display:flex;align-items:center;gap:5px}.inline-form .check input{width:auto}.admin-list{padding:0 28px 28px}.admin-row{display:grid;grid-template-columns:minmax(150px,1fr) 135px 115px auto;gap:10px;align-items:center;padding:12px 0;border-top:1px solid #e8edef;font-size:12px}.admin-row span{overflow-wrap:anywhere}.admin-row select,.admin-row input[type=text]{border:1px solid #d7e1e4;border-radius:7px;padding:7px;min-width:0;width:100%}.admin-row label{display:flex;gap:6px;align-items:center}.admin-row button{border:1px solid #d5e1e3;background:#fff;border-radius:7px;padding:7px 10px;color:#28665d}.admin-row .row-actions{display:flex;gap:5px}.admin-row .delete{color:#aa504c}.empty-admin{font-size:12px;color:#8c9ea6;padding:15px 0}#toast{position:fixed;bottom:22px;right:22px;background:#183b43;color:#fff;padding:12px 17px;border-radius:9px;font-size:13px;box-shadow:0 8px 25px #15374433;display:none;z-index:20;max-width:350px}#toast.show{display:block}#toast.error{background:#a74743}@media(max-width:800px){.shell{display:block}.sidebar{position:relative;height:auto;padding:15px}.brand{margin:0 5px 15px}.sidebar nav{display:flex;gap:5px;overflow:auto}.nav-item,.section-item{width:auto;flex:none}.side-label,.sidebar-footer{display:none}.sections-label{display:none}.sidebar #sections{margin-top:8px}.topbar{padding:0 18px;height:55px}.content{padding:19px 16px 45px}.hero{padding:25px 22px;min-height:145px}.hero h1{font-size:25px}.hero-count{font-size:32px;min-width:60px}.toolbar{margin:20px 0;flex-wrap:wrap}.search-wrap{width:100%}.section-heading{align-items:start}.form-row{grid-template-columns:1fr;gap:0}.inline-form{flex-wrap:wrap}.inline-form input{flex:1 1 190px}.admin-row{grid-template-columns:1fr 110px;gap:8px}.admin-row .row-actions{grid-column:2}.dialog-head,.form-body,.dialog-actions,.admin-tabs,.admin-list{padding-left:18px;padding-right:18px}.summary,.detail-dialog h3,.preview,.hint{margin-left:18px;margin-right:18px}}
+</style>
+  
+</head>
+<body><div style="background:#d6ee99;color:#18333d;padding:10px 18px;font:13px Arial;text-align:center">Предпросмотр · демонстрационные данные · без сохранения файлов</div>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand"><span class="brand-mark">И</span><span>Исследования<small>Портал управления</small></span></div>
+      <div class="side-label">БИБЛИОТЕКА</div>
+      <nav id="areas" aria-label="Тип исследования">
+        <button type="button" class="nav-item active" data-area="internal">Исследования внутренние</button>
+        <button type="button" class="nav-item" data-area="external">Исследования внешние</button>
+      </nav>
+      <div class="side-label sections-label">РАЗДЕЛЫ</div>
+      <nav id="sections" aria-label="Разделы исследований"></nav>
+      <button id="manageSections" class="text-button hidden" type="button">Управление разделами</button>
+      <div class="sidebar-footer"><span class="status-dot"></span> Защищенный доступ</div>
+    </aside>
+
+    <main>
+      <header class="topbar"><div class="breadcrumb">Портал / <span id="crumb">Исследования внутренние</span></div><div id="identity" class="identity"></div></header>
+      <div class="content">
+        <section class="hero"><div><div class="eyebrow">БИБЛИОТЕКА ЗНАНИЙ</div><h1 id="pageTitle">Исследования внутренние</h1><p>Отчеты, анкеты и выводы исследований в одном месте.</p></div><div id="heroCount" class="hero-count">—<small>исследований</small></div></section>
+        <div class="toolbar"><div class="search-wrap"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="Поиск по теме и саммари" aria-label="Поиск исследований"></div><button id="uploadButton" class="primary hidden" type="button">+ Добавить исследование</button></div>
+        <div class="section-heading"><div><h2 id="listTitle">Все исследования</h2><p id="listDescription">Выберите отчет для просмотра</p></div><div id="count" class="count"></div></div>
+        <div id="loading" class="notice">Загрузка…</div><div id="reportList" class="report-grid"></div>
+      </div>
+    </main>
+  </div>
+
+  <dialog id="reportDialog" class="detail-dialog"><div class="dialog-head"><div><div id="detailSection" class="eyebrow"></div><h2 id="detailTitle"></h2></div><button class="icon-button close-dialog" aria-label="Закрыть" type="button">×</button></div><div class="detail-meta"><span id="detailDate"></span><span id="detailType"></span></div><h3>Саммари исследования</h3><p id="detailSummary" class="summary"></p><div id="preview" class="preview"></div><div class="dialog-actions"><a id="questionnaireLink" class="secondary" href="#">Скачать анкету</a><a id="downloadLink" class="primary" href="#">Скачать исследование</a><button id="editReport" class="secondary hidden" type="button">Редактировать</button><button id="deleteReport" class="danger hidden" type="button">Удалить</button></div><p id="downloadHint" class="hint hidden">Скачивание доступно после разрешения администратора.</p></dialog>
+
+  <dialog id="formDialog" class="form-dialog"><form id="reportForm"><div class="dialog-head"><div><div class="eyebrow">ПУБЛИКАЦИЯ</div><h2 id="formTitle">Новое исследование</h2></div><button class="icon-button close-dialog" aria-label="Закрыть" type="button">×</button></div><div class="form-body"><label>Тема исследования <input name="title" maxlength="200" required></label><div class="form-row"><label>Дата исследования <input name="research_date" type="date" required></label><label>Раздел исследования <select id="formSection" name="section_id" required></select></label></div><label>Саммари <textarea name="summary" rows="5" maxlength="5000" required placeholder="Кратко опишите цель, результаты и основные выводы"></textarea></label><div class="form-row"><label>Файл исследования <small>PDF или HTML, до 20 МБ</small><input name="report" type="file" accept=".pdf,.html,application/pdf,text/html"></label><label>Анкета опроса <small>Word DOC или DOCX, до 10 МБ</small><input name="questionnaire" type="file" accept=".doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"></label></div><p id="existingFiles" class="hint hidden"></p></div><div class="dialog-actions"><button type="button" class="secondary close-dialog">Отмена</button><button id="saveReport" type="submit" class="primary">Опубликовать</button></div></form></dialog>
+
+  <dialog id="adminDialog" class="admin-dialog"><div class="dialog-head"><div><div class="eyebrow">АДМИНИСТРИРОВАНИЕ</div><h2>Пользователи и разделы</h2></div><button class="icon-button close-dialog" aria-label="Закрыть" type="button">×</button></div><div class="admin-tabs"><button id="usersTab" class="active" type="button">Пользователи</button><button id="sectionsTab" type="button">Разделы</button></div><div id="usersPanel"><p class="hint">Администратор задает роль и общее право скачивания для каждого пользователя.</p><form id="addUserForm" class="inline-form"><input name="email" type="email" placeholder="email@company.com" aria-label="Email пользователя" required><select name="role" aria-label="Роль"><option value="reader">Читатель</option><option value="editor">Редактор</option><option value="admin">Администратор</option></select><label class="check"><input name="can_download" type="checkbox"> Скачивание</label><button class="primary" type="submit">Добавить</button></form><div id="usersList" class="admin-list"></div></div><div id="sectionsPanel" class="hidden"><p class="hint">Раздел можно переименовать или перенести между вкладками. Удаление возможно, когда в нем нет отчетов.</p><form id="addSectionForm" class="inline-form"><input name="name" placeholder="Название раздела" aria-label="Название раздела" required><select name="area" aria-label="Вкладка"><option value="internal">Внутренние</option><option value="external">Внешние</option></select><button class="primary" type="submit">Добавить</button></form><div id="sectionsList" class="admin-list"></div></div></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+<script>const sections = [
+  ['internal-eplus','Приложение Еплюс'],['internal-loyalty','Программа лояльности'],['internal-csr','КСО'],
+  ['internal-promotions','Акции'],['internal-clubs','Клубы: Питомцы + Дети'],['internal-games','Рекламные игры'],['internal-surveys','Сторонние опросы']
+].map(([id,name],i)=>({id,name,area:'internal',sort_order:i*10}));
+const reports = [
+  {id:'demo-1',title:'Удовлетворенность пользователей приложения Еплюс',summary:'Оценка пользовательского опыта, ключевые барьеры и возможности развития приложения.',research_date:'2026-10-20',section_id:'internal-eplus',section_name:'Приложение Еплюс',area:'internal',report_type:'pdf',report_name:'demo.pdf',questionnaire_name:'survey.docx'},
+  {id:'demo-2',title:'Восприятие программы лояльности',summary:'Основные мотивы участия и наиболее востребованные преимущества программы.',research_date:'2026-09-15',section_id:'internal-loyalty',section_name:'Программа лояльности',area:'internal',report_type:'html',report_name:'demo.html',questionnaire_name:'survey.docx'},
+  {id:'demo-3',title:'Отношение к рекламным играм',summary:'Оценка механики участия и факторов, влияющих на вовлеченность.',research_date:'2026-08-29',section_id:'internal-games',section_name:'Рекламные игры',area:'internal',report_type:'pdf',report_name:'demo.pdf',questionnaire_name:'survey.docx'}
+];
+
+window.fetch=async (input,options={})=>{
+ const u=new URL(String(input),'https://demo.local'); let data={}; let status=200;
+ if(options.method&&options.method!=='GET'){data={error:'Это предпросмотр. Сохранение станет доступно после подключения хранилища.'};status=400;}
+ else if(u.pathname==='/api/me')data={user:{email:'admin@example.com',role:'admin',can_download:0}};
+ else if(u.pathname==='/api/sections')data={sections};
+ else if(u.pathname==='/api/users')data={users:[{email:'admin@example.com',role:'admin',can_download:0}]};
+ else if(u.pathname==='/api/reports')data={reports:reports.filter(r=>r.area===u.searchParams.get('area')&&(!u.searchParams.get('section')||r.section_id===u.searchParams.get('section'))&&(!u.searchParams.get('q')||(r.title+' '+r.summary).toLowerCase().includes(u.searchParams.get('q').toLowerCase())))};
+ return new Response(JSON.stringify(data),{status,headers:{'content-type':'application/json'}});
+};
+const $ = (id) => document.getElementById(id);
+const state = { user: null, area: 'internal', section: '', sections: [], reports: [], active: null, editId: null, searchTimer: null };
+const areaName = { internal: 'Исследования внутренние', external: 'Исследования внешние' };
+const roleName = { admin: 'Администратор', editor: 'Редактор', reader: 'Читатель' };
+
+function el(tag, className, content) {
+  const node = document.createElement(tag);
+  if (className) node.className = className;
+  if (content !== undefined) node.textContent = content;
+  return node;
+}
+function toast(message, error = false) {
+  const node = $('toast'); node.textContent = message; node.className = `show${error ? ' error' : ''}`;
+  clearTimeout(toast.timer); toast.timer = setTimeout(() => node.className = '', 4500);
+}
+async function api(path, options = {}) {
+  const response = await fetch(`/api/${path}`, { cache: 'no-store', ...options });
+  let body;
+  try { body = await response.json(); } catch { body = {}; }
+  if (!response.ok) throw new Error(body.error || `Ошибка ${response.status}`);
+  return body;
+}
+function jsonOptions(method, value) { return { method, headers: { 'content-type': 'application/json' }, body: JSON.stringify(value) }; }
+function dateLabel(value) { return new Intl.DateTimeFormat('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${value}T00:00:00`)); }
+
+async function boot() {
+  try {
+    state.user = (await api('me')).user;
+    const badge = el('span', '', `${state.user.email} · ${roleName[state.user.role]}`);
+    $('identity').append(badge);
+    if (state.user.role === 'admin') {
+      const button = el('button', '', 'Админ-панель'); button.type = 'button';
+      button.addEventListener('click', () => openAdmin()); $('identity').append(button);
+      $('manageSections').classList.remove('hidden');
+    }
+    if (state.user.role !== 'reader') $('uploadButton').classList.remove('hidden');
+    await loadSections(); await loadReports();
+  } catch (error) {
+    $('loading').textContent = error.message;
+    $('loading').classList.remove('hidden');
+    toast(error.message, true);
+  }
+}
+async function loadSections() {
+  state.sections = (await api('sections')).sections;
+  if (state.section && !state.sections.some(s => s.id === state.section && s.area === state.area)) state.section = '';
+  renderSections();
+  renderFormSections();
+}
+function renderSections() {
+  const nav = $('sections'); nav.replaceChildren();
+  const all = el('button', `section-item${!state.section ? ' active' : ''}`, 'Все разделы');
+  all.type = 'button'; all.onclick = () => selectSection(''); nav.append(all);
+  for (const section of state.sections.filter(s => s.area === state.area)) {
+    const button = el('button', `section-item${state.section === section.id ? ' active' : ''}`, section.name);
+    button.type = 'button'; button.onclick = () => selectSection(section.id); nav.append(button);
+  }
+  for (const button of $('areas').querySelectorAll('button')) button.classList.toggle('active', button.dataset.area === state.area);
+  const title = state.sections.find(s => s.id === state.section)?.name || areaName[state.area];
+  $('pageTitle').textContent = areaName[state.area]; $('crumb').textContent = title;
+  $('listTitle').textContent = state.section ? title : 'Все исследования';
+  $('listDescription').textContent = state.section ? 'Материалы выбранного раздела' : 'Выберите отчет для просмотра';
+}
+function renderFormSections() {
+  const select = $('formSection'); select.replaceChildren();
+  for (const section of state.sections) {
+    const option = el('option', '', `${areaName[section.area]} / ${section.name}`); option.value = section.id; select.append(option);
+  }
+}
+async function selectArea(area) { state.area = area; state.section = ''; renderSections(); await loadReports(); }
+async function selectSection(id) { state.section = id; renderSections(); await loadReports(); }
+async function loadReports() {
+  $('loading').textContent = 'Загрузка…'; $('loading').classList.remove('hidden');
+  $('reportList').replaceChildren();
+  try {
+    const params = new URLSearchParams({ area: state.area });
+    if (state.section) params.set('section', state.section);
+    if ($('search').value.trim()) params.set('q', $('search').value.trim());
+    state.reports = (await api(`reports?${params}`)).reports;
+    renderReports();
+  } catch (error) { $('loading').textContent = error.message; toast(error.message, true); }
+}
+function renderReports() {
+  const list = $('reportList'); list.replaceChildren();
+  $('count').textContent = `${state.reports.length} найдено`;
+  $('heroCount').replaceChildren(document.createTextNode(String(state.reports.length)), el('small', '', 'исследований'));
+  if (!state.reports.length) {
+    $('loading').textContent = state.area === 'external' && !state.sections.some(s => s.area === 'external')
+      ? 'Во внешних исследованиях пока нет разделов. Администратор может добавить их в панели управления.'
+      : 'Здесь пока нет исследований по выбранным условиям.';
+    return;
+  }
+  $('loading').classList.add('hidden');
+  for (const report of state.reports) {
+    const card = el('button', 'report-card'); card.type = 'button';
+    const top = el('div', 'card-top'); top.append(el('span', 'badge', report.section_name), el('span', 'format', report.report_type.toUpperCase()));
+    card.append(top, el('h3', '', report.title), el('p', '', report.summary));
+    const bottom = el('div', 'card-bottom'); bottom.append(el('span', '', dateLabel(report.research_date)), el('strong', '', 'Открыть →')); card.append(bottom);
+    card.onclick = () => openReport(report); list.append(card);
+  }
+}
+function openReport(report) {
+  state.active = report;
+  $('detailSection').textContent = `${areaName[report.area]} / ${report.section_name}`;
+  $('detailTitle').textContent = report.title;
+  $('detailDate').textContent = dateLabel(report.research_date);
+  $('detailType').textContent = report.report_type.toUpperCase();
+  $('detailSummary').textContent = report.summary;
+  $('downloadLink').href = `/api/reports/${encodeURIComponent(report.id)}/download`;
+  $('questionnaireLink').href = `/api/reports/${encodeURIComponent(report.id)}/questionnaire`;
+  const allowed = state.user.role === 'admin' || Boolean(state.user.can_download);
+  $('downloadLink').classList.toggle('hidden', !allowed);
+  $('questionnaireLink').classList.toggle('hidden', !allowed);
+  $('downloadHint').classList.toggle('hidden', allowed);
+  $('editReport').classList.toggle('hidden', state.user.role === 'reader');
+  $('deleteReport').classList.toggle('hidden', state.user.role !== 'admin');
+  const preview = $('preview'); preview.replaceChildren();
+  const frame = el('iframe'); frame.title = `Просмотр: ${report.title}`;
+  if (report.report_type === 'html') frame.setAttribute('sandbox', '');
+  frame.src = `/api/reports/${encodeURIComponent(report.id)}/preview`;
+  preview.append(frame); $('reportDialog').showModal();
+}
+function openForm(report = null) {
+  state.editId = report?.id || null;
+  $('reportForm').reset();
+  $('formTitle').textContent = report ? 'Редактировать исследование' : 'Новое исследование';
+  $('saveReport').textContent = report ? 'Сохранить' : 'Опубликовать';
+  $('reportForm').elements.report.required = !report;
+  $('reportForm').elements.questionnaire.required = !report;
+  $('existingFiles').classList.toggle('hidden', !report);
+  if (report) {
+    $('reportForm').elements.title.value = report.title;
+    $('reportForm').elements.research_date.value = report.research_date;
+    $('reportForm').elements.section_id.value = report.section_id;
+    $('reportForm').elements.summary.value = report.summary;
+    $('existingFiles').textContent = `Текущие файлы: ${report.report_name}; ${report.questionnaire_name}. Оставьте выбор файла пустым, чтобы сохранить его.`;
+  } else if (state.section) $('formSection').value = state.section;
+  $('formDialog').showModal();
+}
+async function submitReport(event) {
+  event.preventDefault();
+  const button = $('saveReport'); button.disabled = true;
+  try {
+    const form = new FormData($('reportForm'));
+    const path = state.editId ? `reports/${encodeURIComponent(state.editId)}` : 'reports';
+    await api(path, { method: state.editId ? 'PUT' : 'POST', body: form });
+    $('formDialog').close(); if ($('reportDialog').open) $('reportDialog').close(); toast('Исследование сохранено.'); await loadReports();
+  } catch (error) { toast(error.message, true); }
+  finally { button.disabled = false; }
+}
+async function deleteReport() {
+  if (!state.active || !confirm(`Удалить исследование «${state.active.title}»?`)) return;
+  try { await api(`reports/${encodeURIComponent(state.active.id)}`, { method: 'DELETE' }); $('reportDialog').close(); toast('Исследование удалено.'); await loadReports(); }
+  catch (error) { toast(error.message, true); }
+}
+
+async function openAdmin(tab = 'users') {
+  $('adminDialog').showModal(); showAdminTab(tab);
+  try { await Promise.all([loadUsers(), loadSections().then(renderAdminSections)]); }
+  catch (error) { toast(error.message, true); }
+}
+function showAdminTab(tab) {
+  $('usersPanel').classList.toggle('hidden', tab !== 'users'); $('sectionsPanel').classList.toggle('hidden', tab !== 'sections');
+  $('usersTab').classList.toggle('active', tab === 'users'); $('sectionsTab').classList.toggle('active', tab === 'sections');
+}
+async function loadUsers() { renderUsers((await api('users')).users); }
+function renderUsers(users) {
+  const list = $('usersList'); list.replaceChildren();
+  for (const user of users) {
+    const row = el('div', 'admin-row'); row.append(el('span', '', user.email));
+    const role = el('select'); role.setAttribute('aria-label', `Роль ${user.email}`);
+    for (const [value, label] of Object.entries(roleName)) { const option = el('option', '', label); option.value = value; role.append(option); }
+    role.value = user.role; row.append(role);
+    const check = el('label'); const input = el('input'); input.type = 'checkbox'; input.checked = Boolean(user.can_download);
+    check.append(input, document.createTextNode('Скачивание')); row.append(check);
+    const save = el('button', '', 'Сохранить'); save.type = 'button';
+    save.onclick = async () => {
+      try { await api(`users/${encodeURIComponent(user.email)}`, jsonOptions('PUT', { role: role.value, can_download: input.checked })); toast('Доступ обновлен.'); await loadUsers(); if (user.email === state.user.email) location.reload(); }
+      catch (error) { toast(error.message, true); }
+    };
+    const actions = el('div', 'row-actions'); actions.append(save);
+    if (user.email !== state.user.email) {
+      const revoke = el('button', 'delete', 'Отозвать'); revoke.type = 'button';
+      revoke.onclick = async () => {
+        if (!confirm(`Отозвать доступ у ${user.email}?`)) return;
+        try { await api(`users/${encodeURIComponent(user.email)}`, { method: 'DELETE' }); toast('Доступ отозван.'); await loadUsers(); }
+        catch (error) { toast(error.message, true); }
+      };
+      actions.append(revoke);
+    }
+    row.append(actions); list.append(row);
+  }
+}
+async function addUser(event) {
+  event.preventDefault(); const form = event.currentTarget;
+  try {
+    await api('users', jsonOptions('POST', { email: form.elements.email.value, role: form.elements.role.value, can_download: form.elements.can_download.checked }));
+    form.reset(); toast('Пользователь добавлен.'); await loadUsers();
+  } catch (error) { toast(error.message, true); }
+}
+function renderAdminSections() {
+  const list = $('sectionsList'); list.replaceChildren();
+  for (const section of state.sections) {
+    const row = el('div', 'admin-row');
+    const name = el('input'); name.type = 'text'; name.value = section.name; name.setAttribute('aria-label', `Название ${section.name}`); row.append(name);
+    const area = el('select'); area.setAttribute('aria-label', `Вкладка ${section.name}`);
+    for (const [value, label] of Object.entries(areaName)) { const option = el('option', '', label); option.value = value; area.append(option); }
+    area.value = section.area; row.append(area, el('span', '', ''));
+    const actions = el('div', 'row-actions');
+    const save = el('button', '', 'Сохранить'); save.type = 'button';
+    save.onclick = async () => {
+      try { await api(`sections/${encodeURIComponent(section.id)}`, jsonOptions('PUT', { name: name.value, area: area.value, sort_order: section.sort_order })); await loadSections(); renderAdminSections(); await loadReports(); toast('Раздел обновлен.'); }
+      catch (error) { toast(error.message, true); }
+    };
+    const del = el('button', 'delete', 'Удалить'); del.type = 'button';
+    del.onclick = async () => {
+      if (!confirm(`Удалить раздел «${section.name}»?`)) return;
+      try { await api(`sections/${encodeURIComponent(section.id)}`, { method: 'DELETE' }); if (state.section === section.id) state.section = ''; await loadSections(); renderAdminSections(); await loadReports(); toast('Раздел удален.'); }
+      catch (error) { toast(error.message, true); }
+    };
+    actions.append(save, del); row.append(actions); list.append(row);
+  }
+}
+async function addSection(event) {
+  event.preventDefault(); const form = event.currentTarget;
+  try { await api('sections', jsonOptions('POST', { name: form.elements.name.value, area: form.elements.area.value })); form.reset(); await loadSections(); renderAdminSections(); toast('Раздел добавлен.'); }
+  catch (error) { toast(error.message, true); }
+}
+
+for (const button of document.querySelectorAll('.close-dialog')) button.addEventListener('click', () => button.closest('dialog').close());
+for (const dialog of document.querySelectorAll('dialog')) dialog.addEventListener('click', event => { if (event.target === dialog) dialog.close(); });
+for (const button of $('areas').querySelectorAll('button')) button.onclick = () => selectArea(button.dataset.area);
+$('search').addEventListener('input', () => { clearTimeout(state.searchTimer); state.searchTimer = setTimeout(loadReports, 250); });
+$('uploadButton').onclick = () => openForm();
+$('manageSections').onclick = () => openAdmin('sections');
+$('reportForm').addEventListener('submit', submitReport);
+$('editReport').onclick = () => { const report = state.active; $('reportDialog').close(); openForm(report); };
+$('deleteReport').onclick = deleteReport;
+$('usersTab').onclick = () => showAdminTab('users'); $('sectionsTab').onclick = () => showAdminTab('sections');
+$('addUserForm').addEventListener('submit', addUser);
+$('addSectionForm').addEventListener('submit', addSection);
+boot();
+
+const demoOpenReport=openReport;openReport=function(report){demoOpenReport(report);const frame=document.querySelector('#preview iframe');frame.removeAttribute('src');frame.srcdoc='<html lang="ru"><body style="font:16px Arial;padding:32px;color:#25414e"><h2>Предпросмотр исследования</h2><p>Здесь будет отображаться загруженный PDF или HTML.</p><p>Сейчас в каталоге используются демонстрационные данные.</p></body></html>';for(const id of ['downloadLink','questionnaireLink'])document.getElementById(id).onclick=e=>{e.preventDefault();toast('Файлы будут доступны после подключения хранилища.');};};</script></body>
+</html>
